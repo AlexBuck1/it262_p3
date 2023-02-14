@@ -1,0 +1,49 @@
+html {
+    background-color:red;
+}
+
+.logodiv {
+    padding: 10px;
+    text-align: center;
+       
+}
+
+
+main.wrapper {
+    background-color:black;
+    overflow:auto;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+}
+
+
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.menu_item {
+    display: block;
+}
+
+.extras {
+    text-align: center;
+
+}
+
+option {
+    display: flex;
+    justify-content: center;
+}
+
+
