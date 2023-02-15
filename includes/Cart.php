@@ -45,12 +45,4 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
       echo '<p>Error: Choose a Quantity.</p>';
     }
   }
-
-
-
-
-
-
-
-
 ?>

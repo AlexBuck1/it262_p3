@@ -84,5 +84,9 @@
                 </section>
         </main>
     </div>
+    <footer>
+    <a href="https://docs.google.com/document/d/1K4MzndZdxo26OxzLzxGDNqJfiinyFhiFBNIM-piei5w/edit?usp=sharing">Project Document</a>
+    <a href="https://github.com/AlexBuck1/it262_p3">GitHub Page (private)</a>
+    </footer>
 </body>
 </html>
