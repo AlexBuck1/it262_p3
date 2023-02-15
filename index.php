@@ -20,14 +20,14 @@
     </header>
     <div id="wrapper">
         <main>
-            <h1>Welcome to Chuck's Cheesesteaks!</h1>
-            <h2>Please select Items from our menu:</h2>
-            <div class="row">
+            <h2 class="welcome">Welcome to Chuck's Cheesesteaks!</h2>
+            <h3>Please select Items from our menu:</h3>
                 <section class="column">
                     <form action="<?php echo basename($_SERVER['PHP_SELF']); ?>" method="post">
                         <?php
                             foreach($items as $Item){
                                 echo '<div class="menu_Item">
+                                <fieldset>
                                         <label>
                                             <h2 class="subheader">'.$Item->Name.'</h2>
                                             <p>'.$Item->Description.'</p>
@@ -45,33 +45,43 @@
                                                 <option value="9">9</option>
                                                 <option value="10">10</option>
                                             </select>
+                                </fieldset>
                                         </label>
                                         </div>'
                                      ?>
+                        <div class="add">
+                        <label><b>Add Extras:</b></label>
                         <?php
                             foreach($Item->Extras as $extra => $price) {
                                 echo '<div class="extras">
-                                <label>
-                                  <input type="checkbox" name="extras['.$Item->ID.'][]" value="'.$extra.'" '.'>'.$extra.' ($'.$price.')
-                                      </label><br></div>';
+                                <ul>
+                                <li>
+                                  <input type="checkbox" name="extras['.$Item->ID.'][]" value="'.$extra.'" '.'>'.$extra.' ($'.$price.')</input>
+                                </li>
+                                </ul>
+                                </fieldset>
+                                <br>
+                                </div>';
                               }
                                    
                             }
                         ?>
+                        </div>
                         <div class="submit">
                             <input type="Submit" id="submit" value="Total Up Your Order!"/>
                         </div>
                         <section class="cart">
+                            <fieldset>
                             <h1>Your Cart:</h1>
                             <p>
                                 <?php
                                 include 'includes/Cart.php'
                                 ?>
                             </p>
+                        </fieldset>
                          </section>
                     </form>
                 </section>
-            </div>
         </main>
     </div>
 </body>

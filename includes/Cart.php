@@ -12,7 +12,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
       } else {
         $extras = $_POST['extras'];
         $total = 0;
-        foreach ( $Quantity as $id => $qty ) {
+        $subTotal = 0;
+        foreach ($Quantity as $id => $qty) {
           if (is_numeric($qty) && $qty > 0 ) {
             $Item = $items[$id - 1];
             $itemTotal = number_format($qty * $Item->Price, 2);
@@ -29,15 +30,16 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             $itemTotal += $extra_subtotal;
             echo 'Item Total: $'.number_format($itemTotal, 2).'<br><br>';
             $tax = 0.095;
-            //$subTotal = $itemTotal += $extra_subtotal;
             $subTotal += $itemTotal;
             $cart_tax = $subTotal * $tax;
             $total  = $subTotal + $cart_tax;
           }
         }
-        echo '<p>Subtotal: $'.number_format($subTotal, 2).'</p>';
-        echo '<p>Sales Tax: $'.number_format($cart_tax, 2).'</p>';
-        echo '<p>Total: $'.number_format($total, 2).'</p>';
+        echo '<fieldset>';
+        echo '<p><b>Subtotal</b>: $'.number_format($subTotal, 2).'</p>';
+        echo '<p><b>Sales Tax</b>: $'.number_format($cart_tax, 2).'</p>';
+        echo '<p><b>Total</b>: $'.number_format($total, 2).'</p>';
+        echo '</fieldset>';
       }
     } else {
       echo '<p>Error: Choose a Quantity.</p>';

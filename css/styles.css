@@ -1,11 +1,25 @@
-html {
-    background-color:red;
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+html {
+    background-color: rgb(22, 170, 160);
+    
+}
+
+
 
 .logodiv {
     padding: 10px;
     text-align: center;
        
+}
+
+main {
+    border: 10px double navy;
 }
 
 
@@ -14,16 +28,36 @@ main.wrapper {
     overflow:auto;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
+    
 }
 
+fieldset {
+    background-color: lightgrey;
+    max-width: 500px;
+    text-align: center;
+    padding: 10px;
+    margin: 20px auto;
+    border: 3px double navy;
+    box-shadow: 10px 5px 5px navy;
+}
 
+form ul {
+    margin-bottom:10px;
+    list-style-type: none;
+}
 
-h1 {
+h1, h2, h3 {
     text-align: center;
 }
 
-h2 {
-    text-align: center;
+.subheader {
+    padding: 10px;
+}
+
+.welcome {
+    background-color: white;
+    padding:15px;
+    border: 3px double navy;
 }
 
 .row:after {
@@ -36,14 +70,23 @@ h2 {
     display: block;
 }
 
-.extras {
-    text-align: center;
 
-}
 
 option {
     display: flex;
     justify-content: center;
 }
 
+.extras {
+    vertical-align: middle;
+}
 
+.add {
+    text-align: center;
+    vertical-align: middle;
+}
+
+header {
+    padding: 15px;
+    background-color: rgb(22, 170, 160);
+}
